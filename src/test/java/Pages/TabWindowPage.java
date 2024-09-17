@@ -1,2 +1,4 @@
-package Pages;public class TabWindowPage {
+package Pages;
+
+public class TabWindowPage {
 }

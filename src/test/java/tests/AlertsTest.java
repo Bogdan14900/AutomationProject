@@ -29,29 +29,21 @@ public class AlertsTest {
         elementMethods elementMethods = new elementMethods(driver);
         alertMethods alertsMethods = new alertMethods(driver);
 
-        WebElement alertFrameWindowMenu = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
-        elementMethods.clickJSElement(alertFrameWindowMenu);
+        alertsPage.clickAlerts();
 
-        WebElement browserWindowElement=driver.findElement(By.xpath("//span[text()='Alerts']"));
-        elementMethods.clickJSElement(browserWindowElement);
-
-        WebElement okAlert = driver.findElement(By.id("alertButton"));
-        elementMethods.clickElement(okAlert);
+        alertsPage.clickOkAlert();
 
         alertsMethods.acceptAlert();
 
-        WebElement timerAlertButtonElement = driver.findElement(By.id("timerAlertButton"));
-        elementMethods.clickJSElement(timerAlertButtonElement);
+        alertsPage.clickTimerAlert();
 
         alertsMethods.acceptAlert();
 
-        WebElement alertConfirm = driver.findElement(By.id("confirmButton"));
-        elementMethods.clickElement(alertConfirm);
+        alertsPage.clickConfirmAlert();
 
         alertsMethods.dismissAlert();
 
-        WebElement alertPrompt = driver.findElement(By.id("promtButton"));
-        elementMethods.clickElement(alertPrompt);
+        alertsPage.clickPromptAlert();
 
         alertsMethods.fillAlert("This is a test");
         driver.quit();
